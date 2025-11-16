@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { PhoneShell } from "@/components/PhoneShell";
 import { BottomNav } from "@/components/BottomNav";
+import { withBasePath } from "@/lib/basePath";
 
 const genericResponses = [
   "That's a great observation! Tracking your triggers is an important step in managing migraines.",
@@ -102,7 +103,7 @@ export default function ChatPage() {
           <div className="flex justify-start animate-fade-in">
             <div className="flex max-w-[85%] flex-col items-center gap-2 rounded-[20px] bg-white px-5 py-4">
               <Image
-                src="/logo.png"
+                src={withBasePath("/logo.png")}
                 alt="Thinking"
                 width={60}
                 height={60}

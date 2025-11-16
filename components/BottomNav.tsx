@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { withBasePath } from "@/lib/basePath";
 
 type NavItem = {
   href: string;
@@ -16,22 +17,22 @@ const items: NavItem[] = [
   {
     href: "/dashboard",
     name: "home",
-    iconSrc: "/fi-rr-home.svg",
+    iconSrc: withBasePath("/fi-rr-home.svg"),
   },
   {
     href: "/community",
     name: "community",
-    iconSrc: "/Users_Group.svg",
+    iconSrc: withBasePath("/Users_Group.svg"),
   },
   {
     href: "/chat",
     name: "log",
-    iconSrc: "/fi-rr-comments.svg",
+    iconSrc: withBasePath("/fi-rr-comments.svg"),
   },
   {
     href: "/stats",
     name: "stats",
-    iconSrc: "/Chart_Bar_Vertical_01.svg",
+    iconSrc: withBasePath("/Chart_Bar_Vertical_01.svg"),
   },
 ];
 

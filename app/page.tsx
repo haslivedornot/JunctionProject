@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PhoneShell } from "@/components/PhoneShell";
+import { withBasePath } from "@/lib/basePath";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       </div>
 
       <Image
-        src="/logo.png"
+        src={withBasePath("/logo.png")}
         alt="MyMi mascot"
         width={240}
         height={240}

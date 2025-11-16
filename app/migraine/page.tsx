@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { PhoneShell } from "@/components/PhoneShell";
+import { withBasePath } from "@/lib/basePath";
 
 export default function MigrainePage() {
   const router = useRouter();
@@ -96,7 +97,7 @@ export default function MigrainePage() {
           </h1>
 
           <Image
-            src="/logo.png"
+            src={withBasePath("/logo.png")}
             alt="MyMi mascot"
             width={200}
             height={200}
